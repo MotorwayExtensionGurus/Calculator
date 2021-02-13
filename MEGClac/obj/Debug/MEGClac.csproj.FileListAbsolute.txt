@@ -1,0 +1,20 @@
+C:\Users\jonan\source\repos\MEGClac\MEGClac\bin\Debug\MEG Calculator.exe.config
+C:\Users\jonan\source\repos\MEGClac\MEGClac\bin\Debug\MEG Calculator.exe
+C:\Users\jonan\source\repos\MEGClac\MEGClac\bin\Debug\MEG Calculator.pdb
+C:\Users\jonan\source\repos\MEGClac\MEGClac\obj\Debug\MEGClac.csprojAssemblyReference.cache
+C:\Users\jonan\source\repos\MEGClac\MEGClac\obj\Debug\MEGClac.Form1.resources
+C:\Users\jonan\source\repos\MEGClac\MEGClac\obj\Debug\MEGCalc.Properties.Resources.resources
+C:\Users\jonan\source\repos\MEGClac\MEGClac\obj\Debug\MEGClac.csproj.GenerateResource.cache
+C:\Users\jonan\source\repos\MEGClac\MEGClac\obj\Debug\MEGClac.csproj.CoreCompileInputs.cache
+C:\Users\jonan\source\repos\MEGClac\MEGClac\obj\Debug\MEG Calculator.exe
+C:\Users\jonan\source\repos\MEGClac\MEGClac\obj\Debug\MEG Calculator.pdb
+C:\Users\jonan\OneDrive\Dokumenter\MEGClac\MEGClac\obj\Debug\MEGClac.csprojAssemblyReference.cache
+C:\Users\jonan\OneDrive\Dokumenter\MEGClac\MEGClac\obj\Debug\MEGClac.Form1.resources
+C:\Users\jonan\OneDrive\Dokumenter\MEGClac\MEGClac\obj\Debug\MEGCalc.Properties.Resources.resources
+C:\Users\jonan\OneDrive\Dokumenter\MEGClac\MEGClac\obj\Debug\MEGClac.csproj.GenerateResource.cache
+C:\Users\jonan\OneDrive\Dokumenter\MEGClac\MEGClac\obj\Debug\MEGClac.csproj.CoreCompileInputs.cache
+C:\Users\jonan\OneDrive\Dokumenter\MEGClac\MEGClac\obj\Debug\MEG Calculator.exe
+C:\Users\jonan\OneDrive\Dokumenter\MEGClac\MEGClac\obj\Debug\MEG Calculator.pdb
+C:\Users\jonan\OneDrive\Dokumenter\MEGClac\MEGClac\bin\Debug\MEG Calculator.exe.config
+C:\Users\jonan\OneDrive\Dokumenter\MEGClac\MEGClac\bin\Debug\MEG Calculator.exe
+C:\Users\jonan\OneDrive\Dokumenter\MEGClac\MEGClac\bin\Debug\MEG Calculator.pdb
