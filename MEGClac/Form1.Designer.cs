@@ -1,5 +1,5 @@
 ﻿
-namespace MEGClac
+namespace MEGCalc
 {
     partial class Form1
     {
