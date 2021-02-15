@@ -15,10 +15,10 @@ namespace MEGCalc
         private int OldCoordsNeDistance;
         private double OldNetherrack;
         private double OldTotalDistance;
+        private double PercentDone;
         private int Player1;
         private int Player2;
         private int Player2Distance;
-        private double PercentDone;
         private double TotalDistance;
         private int X;
 
@@ -28,9 +28,16 @@ namespace MEGCalc
             Procent.Text = Convert.ToString(PercentDone, CultureInfo.InvariantCulture) + @"%";
         }
 
+        private void ClearFields()
+        {
+            Distance.Text = "";
+            Netherrack.Text = "";
+            Procent.Text = "";
+        }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            try // Couldn't be bothered to check if the input is a number or text, so i just added a try catch
+            try
             {
                 Player1 = Convert.ToInt32(tbPlayer1.Text); // Takes the input and makes it a variable
                 if (Player2 != 0 && Player2 > 0 && Player1 > 0) // Starts the calculating process if both fields has an input
@@ -44,22 +51,18 @@ namespace MEGCalc
                         PercentDone = TotalDistance / 3750000 * 100; // I had some trouble calculating percent in the field below, so i just split it in 2.
                         Procent.Text = Convert.ToString(Math.Round(PercentDone, 2), CultureInfo.InvariantCulture) + @"%";
                         Procent.Text = $@"{double.Parse(Procent.Text):#,##0.00}";
-                        Netherrack.Text =
-                            $@"{double.Parse(Netherrack.Text):n0}"; //I tried to split up the 1000's like 1,000,000 instead of 1000000 but
-                        Distance.Text = $@"{double.Parse(Distance.Text):n0}"; // i just couldn't get it to work for the life of me. It still outputs the number here though
+                        Netherrack.Text = $@"{double.Parse(Netherrack.Text):n0}"; //I tried to split up the 1000's like 1,000,000 instead of 1000000 but
+                        Distance.Text =
+                            $@"{double.Parse(Distance.Text):n0}"; // i just couldn't get it to work for the life of me. It still outputs the number here though
                     }
                     else
                     {
-                        Distance.Text = "";
-                        Netherrack.Text = ""; // Clears fields if the distance isn't valid
-                        Procent.Text = "";
+                        ClearFields();
                     }
                 }
                 else
                 {
-                    Distance.Text = "";
-                    Netherrack.Text = "";
-                    Procent.Text = "";
+                    ClearFields();
                 }
             } catch (Exception)
             {
@@ -87,16 +90,12 @@ namespace MEGCalc
                     }
                     else
                     {
-                        Distance.Text = "";
-                        Netherrack.Text = "";
-                        Procent.Text = "";
+                        ClearFields();
                     }
                 }
                 else
                 {
-                    Distance.Text = "";
-                    Netherrack.Text = "";
-                    Procent.Text = "";
+                    ClearFields();
                 }
             } catch (Exception)
             {
@@ -110,25 +109,25 @@ namespace MEGCalc
             tbPasta.Text = @"Leg 1 current progress: **" + Convert.ToString(Math.Round(PercentDone, 2), CultureInfo.InvariantCulture) + @"% done**";
             if (EtaCalc)
             {
-                tbPasta.Text += @"\r\n";
+                tbPasta.Text += Environment.NewLine;
                 tbPasta.Text = tbPasta.Text + @"ETA: **" + daysLeft.Text + @" days**";
             }
-            tbPasta.Text += @"\r\n";
-            tbPasta.Text += @"\r\n";
+            tbPasta.Text += Environment.NewLine;
+            tbPasta.Text += Environment.NewLine;
             tbPasta.Text = tbPasta.Text + @"Total distance dug: " + Distance.Text + @"/3750000";
-            tbPasta.Text += @"\r\n";
+            tbPasta.Text += Environment.NewLine;
             tbPasta.Text = tbPasta.Text + @"Netherrack dug: " + Netherrack.Text + @"/90000000";
             if (EtaCalc)
             {
-                tbPasta.Text += @"\r\n";
+                tbPasta.Text += Environment.NewLine;
                 tbPasta.Text = tbPasta.Text + @"Distance per day currently: " + distancePerDay.Text;
-                tbPasta.Text += @"\r\n";
+                tbPasta.Text += Environment.NewLine;
                 tbPasta.Text = tbPasta.Text + @"Netherrack per day currently: " + NetherrackPerDay.Text;
             }
-            tbPasta.Text += @"\r\n";
-            tbPasta.Text += @"\r\n";
+            tbPasta.Text += Environment.NewLine;
+            tbPasta.Text += Environment.NewLine;
             tbPasta.Text = tbPasta.Text + @"Digger 1 position: " + tbPlayer1.Text + @", -3750000";
-            tbPasta.Text += @"\r\n";
+            tbPasta.Text += Environment.NewLine;
             tbPasta.Text = tbPasta.Text + @"Digger 2 position: " + tbPlayer2.Text + @", -3750000"; // It could probably be more efficient, but idgaf it works
         }
 
@@ -158,10 +157,11 @@ namespace MEGCalc
 
         private void tbOldN_TextChanged(object sender, EventArgs e)
         {
-            OldCoordsN = Convert.ToInt32(tbOldN.Text); // Takes the input and makes it a variable
-
-            try // Couldn't be bothered to check if the input is a number or text, so i just added a try catch
+            try
             {
+                OldCoordsN = Convert.ToInt32(tbOldN.Text); // Takes the input and makes it a variable
+
+
                 if (OldCoordsNe > 0 && OldCoordsNe > 0 && OldCoordsN > 0 && Player1 > 0 && Player2 > 0 && Convert.ToInt32(tbDays.Text) > 0
                 ) // Starts the calculating process if all fields has an input
                 {
@@ -210,10 +210,10 @@ namespace MEGCalc
 
         private void tbOldNE_TextChanged(object sender, EventArgs e)
         {
-            OldCoordsNe = Convert.ToInt32(tbOldNE.Text); // Takes the input and makes it a variable
-
-            try // Couldn't be bothered to check if the input is a number or text, so i just added a try catch
+            try
             {
+                OldCoordsNe = Convert.ToInt32(tbOldNE.Text); // Takes the input and makes it a variable
+
                 if (OldCoordsNe > 0 && OldCoordsNe > 0 && OldCoordsN > 0 && Player1 > 0 && Player2 > 0 && Convert.ToInt32(tbDays.Text) > 0
                 ) // Starts the calculating process if all fields has an input
                 {
@@ -262,7 +262,7 @@ namespace MEGCalc
 
         private void tbDays_TextChanged(object sender, EventArgs e)
         {
-            try // Couldn't be bothered to check if the input is a number or text, so i just added a try catch
+            try
             {
                 if (OldCoordsNe > 0 && OldCoordsNe > 0 && OldCoordsN > 0 && Player1 > 0 && Player2 > 0 && Convert.ToInt32(tbDays.Text) > 0
                 ) // Starts the calculating process if all fields has an input
@@ -308,6 +308,12 @@ namespace MEGCalc
             {
                 // ignored
             }
+        }
+
+        private void Int_Input_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+                e.Handled = true;
         }
     }
 }
