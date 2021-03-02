@@ -1,1 +1,0 @@
-yes i misspelled MEGcalc, fuck you
