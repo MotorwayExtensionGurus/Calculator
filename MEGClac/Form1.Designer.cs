@@ -1,8 +1,9 @@
 ﻿
-namespace MEGClac
+namespace MEGCalc
 {
     partial class Form1
     {
+        ///Improved by Sigma76! (https://github.com/Basicprogrammer10)
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -67,6 +68,7 @@ namespace MEGClac
             this.tbPlayer1.Size = new System.Drawing.Size(202, 20);
             this.tbPlayer1.TabIndex = 0;
             this.tbPlayer1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.tbPlayer1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Int_Input_KeyPress);
             // 
             // tbPlayer2
             // 
@@ -75,6 +77,7 @@ namespace MEGClac
             this.tbPlayer2.Size = new System.Drawing.Size(202, 20);
             this.tbPlayer2.TabIndex = 1;
             this.tbPlayer2.TextChanged += new System.EventHandler(this.tbPlayer2_TextChanged);
+            this.tbPlayer2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Int_Input_KeyPress);
             // 
             // label1
             // 
@@ -101,12 +104,12 @@ namespace MEGClac
             this.ProcentName.Name = "ProcentName";
             this.ProcentName.Size = new System.Drawing.Size(44, 13);
             this.ProcentName.TabIndex = 4;
-            this.ProcentName.Text = "Procent";
+            this.ProcentName.Text = "Percent";
             // 
             // Netherrack
             // 
             this.Netherrack.AutoSize = true;
-            this.Netherrack.Location = new System.Drawing.Point(24, 132);
+            this.Netherrack.Location = new System.Drawing.Point(24, 136);
             this.Netherrack.Name = "Netherrack";
             this.Netherrack.Size = new System.Drawing.Size(0, 13);
             this.Netherrack.TabIndex = 5;
@@ -115,7 +118,7 @@ namespace MEGClac
             // Distance
             // 
             this.Distance.AutoSize = true;
-            this.Distance.Location = new System.Drawing.Point(181, 132);
+            this.Distance.Location = new System.Drawing.Point(172, 136);
             this.Distance.Name = "Distance";
             this.Distance.Size = new System.Drawing.Size(0, 13);
             this.Distance.TabIndex = 6;
@@ -123,10 +126,11 @@ namespace MEGClac
             // Procent
             // 
             this.Procent.AutoSize = true;
-            this.Procent.Location = new System.Drawing.Point(119, 175);
+            this.Procent.Location = new System.Drawing.Point(110, 179);
             this.Procent.Name = "Procent";
-            this.Procent.Size = new System.Drawing.Size(0, 13);
+            this.Procent.Size = new System.Drawing.Size(19, 13);
             this.Procent.TabIndex = 7;
+            this.Procent.Text = "    ";
             // 
             // label3
             // 
@@ -171,6 +175,7 @@ namespace MEGClac
             this.tbOldN.Size = new System.Drawing.Size(205, 20);
             this.tbOldN.TabIndex = 13;
             this.tbOldN.TextChanged += new System.EventHandler(this.tbOldN_TextChanged);
+            this.tbOldN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Int_Input_KeyPress);
             // 
             // tbOldNE
             // 
@@ -179,11 +184,12 @@ namespace MEGClac
             this.tbOldNE.Size = new System.Drawing.Size(205, 20);
             this.tbOldNE.TabIndex = 14;
             this.tbOldNE.TextChanged += new System.EventHandler(this.tbOldNE_TextChanged);
+            this.tbOldNE.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Int_Input_KeyPress);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(336, 9);
+            this.label5.Location = new System.Drawing.Point(333, 29);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(154, 13);
             this.label5.TabIndex = 15;
@@ -232,6 +238,7 @@ namespace MEGClac
             this.tbDays.Size = new System.Drawing.Size(39, 20);
             this.tbDays.TabIndex = 20;
             this.tbDays.TextChanged += new System.EventHandler(this.tbDays_TextChanged);
+            this.tbDays.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Int_Input_KeyPress);
             // 
             // label10
             // 
@@ -273,18 +280,16 @@ namespace MEGClac
             this.daysLeft.AutoSize = true;
             this.daysLeft.Location = new System.Drawing.Point(336, 203);
             this.daysLeft.Name = "daysLeft";
-            this.daysLeft.Size = new System.Drawing.Size(41, 13);
+            this.daysLeft.Size = new System.Drawing.Size(0, 13);
             this.daysLeft.TabIndex = 25;
-            this.daysLeft.Text = "label14";
             // 
             // distancePerDay
             // 
             this.distancePerDay.AutoSize = true;
             this.distancePerDay.Location = new System.Drawing.Point(463, 204);
             this.distancePerDay.Name = "distancePerDay";
-            this.distancePerDay.Size = new System.Drawing.Size(41, 13);
+            this.distancePerDay.Size = new System.Drawing.Size(0, 13);
             this.distancePerDay.TabIndex = 26;
-            this.distancePerDay.Text = "label15";
             // 
             // NetherrackPerDay
             // 
@@ -347,7 +352,11 @@ namespace MEGClac
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbPlayer2);
             this.Controls.Add(this.tbPlayer1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(596, 418);
+            this.MinimumSize = new System.Drawing.Size(596, 418);
             this.Name = "Form1";
+            this.ShowIcon = false;
             this.Text = "Leg calculator";
             this.ResumeLayout(false);
             this.PerformLayout();
