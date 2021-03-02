@@ -1,0 +1,2 @@
+# Calculator
+Netherrack mining calculator
